@@ -16,8 +16,8 @@ void solve(){
 
     int c=0,s=0,anti=0;
     while(n>=0){
-        c++;
-        n-=gcd((c&1)?a:b,n);
+        c++; // se o número for impar é a vez de simon...
+        n-=gcd((c&1)?a:b,n); // se c%2==1 n-gcd(a,n)...
     }
     if(c&1){
         cout<<1<<"\n";
